@@ -30,6 +30,6 @@ jobs:
       - name: Push
         run: |
           git add .
-          git pull https://github.com/psbuilder/psbuilder.wiki.git --rebase
+          git pull https://github.com/psbuilder/psbuilder.wiki.git --no-rebase
           git commit -m "Sync wiki to this repo"
           git push --repo https://github.com/psbuilder/wiki.git
