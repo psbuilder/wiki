@@ -29,7 +29,7 @@ jobs:
         run: git clone https://github.com/psbuilder/psbuilder.wiki.git
       - name: Push
         run: |
-          mv "${GITHUB_WORKSPACE}/psbuilder.wiki/*" "${GITHUB_WORKSPACE}"
+          mv ${GITHUB_WORKSPACE}/psbuilder.wiki/{.,}* ${GITHUB_WORKSPACE}
           git add .
           git commit -m "Sync wiki to this repo"
           echo "Pushing to GitHub..."
